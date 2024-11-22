@@ -10,7 +10,8 @@ local filter = { { filter = "type", type = "ammo-turret" },
 	{ filter = "type", type = "solar-panel" },
 	{ filter = "type", type = "accumulator" },
 	{ filter = "type", type = "reactor" },
-	{ filter = "type", type = "beacon" }
+	{ filter = "type", type = "beacon" },
+        { filter = "type", type = "inserter" }--机械臂
 }
 
 if script.active_mods["space-age"] then
