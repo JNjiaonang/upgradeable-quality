@@ -1,9 +1,13 @@
 require("util")
 
 local filter = { { filter = "type", type = "ammo-turret" },
+	{ filter = "type", type = "electric-turret" },
+	{ filter = "type", type = "fluid-turret" },
+	{ filter = "type", type = "artillery-turret" },
 	{ filter = "type", type = "assembling-machine" },
 	{ filter = "type", type = "furnace" },
 	{ filter = "type", type = "lab" },
+	{ filter = "type", type = "container" },
 	{ filter = "type", type = "mining-drill" },
 	{ filter = "type", type = "boiler" },
 	{ filter = "type", type = "generator" },
@@ -11,12 +15,25 @@ local filter = { { filter = "type", type = "ammo-turret" },
 	{ filter = "type", type = "accumulator" },
 	{ filter = "type", type = "reactor" },
 	{ filter = "type", type = "beacon" },
-        { filter = "type", type = "inserter" }--机械臂
+	{ filter = "type", type = "offshore-pump" },
+	{ filter = "type", type = "rocket-silo" },
+	{ filter = "type", type = "inserter" },
+	{ filter = "type", type = "logistic-container" },
+	{ filter = "type", type = "electric-pole" },
+	{ filter = "type", type = "roboport" },
+	{ filter = "type", type = "pump" }
 }
 
 if script.active_mods["space-age"] then
 	table.insert(filter, { filter = "type", type = "asteroid-collector" })
+	table.insert(filter, { filter = "type", type = "fusion-reactor" })
+	table.insert(filter, { filter = "type", type = "fusion-generator" })
+	table.insert(filter, { filter = "type", type = "lightning-attractor" })
+	table.insert(filter, { filter = "type", type = "cargo-landing-pad" })
+	table.insert(filter, { filter = "type", type = "cargo-bay" })
+	table.insert(filter, { filter = "type", type = "thruster" })
 end
+
 
 
 function get_lite_filter()
